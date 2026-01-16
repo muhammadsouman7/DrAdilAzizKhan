@@ -66,15 +66,26 @@ ul {
 }
 
 .navbar-logo {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary-blue);
     font-family: 'Playfair Display', serif;
+    line-height: 1.3;
 }
 
-.navbar-logo span {
+.navbar-logo .subtitle {
+    display: block;
+    font-size: 0.8rem;
     font-weight: 300;
     color: var(--text-dark);
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+.navbar-logo .asst {
+    position: relative;
+    bottom: 10px;
+    font-size: 0.8rem;
 }
 
 .nav-links {
@@ -126,7 +137,7 @@ ul {
 }
 
 
-/* Beautiful Hamburger Icon */
+/* Hamburger Icon */
 
 .mobile-toggle {
     display: none;
@@ -168,7 +179,6 @@ ul {
 .mobile-nav-cta {
     width: 100%;
     max-width: 280px;
-    /* Prevents it from being too wide */
     margin: 0 auto;
     font-size: 0.95rem;
     padding: 14px 20px;
@@ -202,7 +212,6 @@ ul {
     }
     .nav-links {
         flex-direction: column;
-        /* Vertical links on mobile */
         width: 100%;
     }
     .nav-links li {
@@ -398,10 +407,45 @@ section {
 }
 
 
+/* --- Accolades Section --- */
+
+.accolades-section {
+    background-color: #fcfdfe;
+}
+
+.accordion-button {
+    color: var(--primary-blue);
+    font-size: 1rem;
+}
+
+.accordion-button::after {
+    transition: filter 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--accent-blue);
+    color: #fff;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-body ol li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+
 /* --- Hospital Cards --- */
 
 .hospitals-section {
-    background: #fcfdfe;
+    background: var(--white);
 }
 
 .hospital-card {
@@ -417,9 +461,9 @@ section {
     transform: translateY(-10px);
 }
 
-.hospital-img img {
+.carousel-item img {
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
 }
 
@@ -476,6 +520,11 @@ section {
     font-weight: 600;
     font-style: italic;
     opacity: 0.8;
+}
+
+.review-links a:hover {
+    background-color: var(--accent-blue) !important;
+    color: var(--white) !important;
 }
 
 
@@ -542,5 +591,20 @@ footer {
     .hero-image-container {
         order: -1;
         margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-card {
+        padding: 15px;
+    }
+    .experience-card h3 {
+        font-size: 1.5rem;
+    }
+    .experience-card p {
+        font-size: 0.8rem;
+    }
+    .hero-btns a {
+        font-size: 0.75rem;
     }
 }
