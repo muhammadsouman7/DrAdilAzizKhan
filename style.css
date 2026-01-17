@@ -557,6 +557,9 @@ textarea:focus {
     box-shadow: var(--shadow);
 }
 
+
+/* --- Footer --- */
+
 .footer {
     padding: 10px 0;
     background: var(--dark-blue);
@@ -592,6 +595,9 @@ footer {
         order: -1;
         margin-bottom: 40px;
     }
+    .contact-info {
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -604,7 +610,10 @@ footer {
     .experience-card p {
         font-size: 0.8rem;
     }
+    .hero-btns {
+        flex-direction: column;
+    }
     .hero-btns a {
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
 }
