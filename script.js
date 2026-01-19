@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll(".experience").forEach(exp => {
         exp.textContent = experience + "+";
     });
-    // --- 1. Select Elements ---
+    // --- Select Elements ---
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu-wrapper');
     const navLinks = document.querySelectorAll('.nav-item, .nav-cta, .btn-outline, .mobile-nav-cta');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
     const appointmentForm = document.getElementById('appointmentForm');
 
-    // --- 2. Mobile Menu & Hamburger Logic ---
+    // --- Mobile Menu & Hamburger Logic ---
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
             mobileToggle.classList.toggle('active');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. Smooth Scroll & Auto-Close Menu ---
+    // --- Smooth Scroll & Auto-Close Menu ---
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 4. Scrollspy (Active Link) & Navbar Styling ---
+    // --- Scrollspy (Active Link) & Navbar Styling ---
     window.addEventListener('scroll', () => {
         let current = '';
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 5. WhatsApp Form Integration ---
+    // --- WhatsApp Form Integration ---
     if (appointmentForm) {
         appointmentForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
 
-            const paNumber = "923119455349";
+            const paNumber = "923408907350";
 
             // Construct the WhatsApp URL
             const encodedText = encodeURIComponent(
